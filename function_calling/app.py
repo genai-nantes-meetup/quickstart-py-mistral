@@ -97,12 +97,7 @@ def think(prompt):
                 model=model,
                 tools=tools, # list of functions that LLM might call
                 tool_choice="auto", # might call a tool or not
-                messages = chat_history + [
-                    # {
-                    #     "role": "user",
-                    #     "content": prompt,
-                    # }
-                ],
+                messages = chat_history,
                 stream=False,
             )
 
